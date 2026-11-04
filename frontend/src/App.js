@@ -1,9 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
 
 function App() {
   return (
     <div className="App">
+      <Header />
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -15,8 +18,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h1>Hello World / 
-          React App</h1>
+          <h1>World</h1>
         </a>
       </header>
     </div>
