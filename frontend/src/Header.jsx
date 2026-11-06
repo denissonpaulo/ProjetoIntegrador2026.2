@@ -1,7 +1,7 @@
-function Header() {
+function Header(parameters) {
   return (
     <header>
-      <h1>Projeto Integrador - PI</h1>
+      <h1>{parameters.title}</h1>
     </header>
   );
 }
