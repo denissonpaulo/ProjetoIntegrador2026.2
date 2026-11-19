@@ -10,7 +10,7 @@ function Menu() {
             <button type="button" class="btn btn-danger"><Link to="/formulario">Formulário</Link></button>
             <button type="button" class="btn btn-warning"><Link to="/users">Usuários</Link></button>
             <button type="button" class="btn btn-primary"><Link to="/coletdados">Coleta de Dados</Link></button>
-            <button type="button" class="btn btn-light"><Link to="/senhas">Senhas</Link></button>
+            <button type="button" class="btn btn-light"><Link to="/senhas">Senha</Link></button>
             <button type="button" class="btn btn-dark"><Link to="/alarme">Alarme</Link></button>
 
         </div>
