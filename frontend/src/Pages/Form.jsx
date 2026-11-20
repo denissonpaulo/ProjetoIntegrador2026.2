@@ -31,7 +31,7 @@ function Form() {
 
   function handleFormSubmit(event) {
     event.preventDefault();
-    axios.post('http://https://jubilant-barnacle-rwwpv4j55w6h59qw-3001.app.github.dev/:3001/form', campos)
+    axios.post('https://jubilant-barnacle-rwwpv4j55w6h59qw-3001.app.github.dev/cadastro', campos)
       .then((response) => {
         alert(response.data.dados.length + ' registros inseridos com sucesso!');
       })
@@ -48,15 +48,15 @@ function Form() {
           <legend>Dados Pessoais</legend>
           <label>
             Nome:
-            <input type="text" name="nome" onChange={handleInputChange} />
+            <input type="text" name="nome" id="nome" onChange={handleInputChange} />
           </label><br />
           <label>
             Idade:
-            <input type="number" name="idade" onChange={handleInputChange} />
+            <input type="number" name="idade" id="idade" onChange={handleInputChange} />
           </label><br />
           <label>
             UF:
-            <select name="uf" onChange={handleInputChange}>
+            <select name="uf" id="uf" onChange={handleInputChange}>
               <option value="0">Escolha seu estado</option>
               {estados.map((estado) => (
                 <option key={estado.id} value={estado.sigla}>{estado.nome}</option>
@@ -68,11 +68,11 @@ function Form() {
           <legend>Dados de Contato</legend>
           <label>
             Email:
-            <input type="email" name="email" onChange={handleInputChange}/>
+            <input type="text" name="email" id="email" onChange={handleInputChange}/>
           </label>
           <label>
             Telefone:
-            <input type="tel" name="telefone" onChange={handleInputChange} />
+            <input type="text" name="telefone" id="telefone" onChange={handleInputChange} />
           </label>
         </fieldset><br />
         <button type="submit">Enviar</button>

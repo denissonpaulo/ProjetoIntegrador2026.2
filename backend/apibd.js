@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const sqlite = require('sqlite3').verbose();
+//const bodyParser = require('body-parser');
+//const cors = require('cors');
+//const sqlite = require('sqlite3').verbose();
 const cadastros = [];
 
 app.use(require('cors')());
@@ -17,7 +17,7 @@ app.post('/cadastro', (req, res, next) => {
     //salva no banco de dados
     cadastros.push({
         nome: req.body.nome,
-        idade: req.body.idade,
+        idade: parseInt(req.body.idade),
         uf: req.body.uf,
         email: req.body.email,
         telefone: req.body.telefone
@@ -25,6 +25,4 @@ app.post('/cadastro', (req, res, next) => {
     res.json({ message: "Tudo ok por aqui!", dados: cadastros });
     })
 
-    app.listen(3001, () => {
-        console.log('Servidor rodando na porta 3001');
-    });
+    app.listen(3001, () => console.log('Servidor rodando na porta 3001'));
